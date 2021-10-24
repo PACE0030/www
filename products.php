@@ -39,26 +39,41 @@ if (!$link) {
   </Header>
   <body>
   <center>
-  <?php
-    if ($result = mysqli_query($link, "SELECT * FROM product")) {
-      if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-          echo "<div class='product'>";
-          echo "</a>";
-		  echo '<a href="addtocart.php?id='. $row['product_id']  .'"> <h2>' . $row['name'] . "</h2> </a>";
-          echo "<span>$" . $row['price'] . "</span>";
-          echo "</div>";
-        }
-      } else {
-        echo "no results";
-      }
-    } else {
-      echo "unable to display";
-    }
-    ?>
+		<?php
+            if ($result = mysqli_query($link, "SELECT * FROM product")) {
+              if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo "<div class='product'>";
+                  echo "</a>";
+                  echo "<h2>" . $row['name'] . "</h2> </a>";
+				  echo "<table align='center'>";
+				  echo "<tr><th scope='col'  class='descbox'>";
+				  echo "<img>" . $row['img'] . "</img>";
+				  echo "</th>";
+				  echo "<th scope='col'  class='descboxleft'>";
+				  echo "<h3>$" . $row['price'] . "</h3>";
+
+  				  echo "<p>" . $row['description'] ."</p></tr>";
+				  echo "</table>";
+				  echo '<button class="button"><b><a class="button" href="addtocart.php?id='. $row['product_id'] . '">Add to Cart' . "</a></b></button>";
+
+                  echo "<br></div>";
+                }
+              } else {
+                echo "no results";
+              }
+            } else {
+              echo "unable to display";
+            }
+            ?>
     </center>
     <br>
-
+    <table width="80%" border="1">
+      <tr>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">&nbsp;</th>
+      </tr>
+    </table>
 </body>
 <footer class="footer">
     <table width="80%" border="0" align="center">
