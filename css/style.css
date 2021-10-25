@@ -7,9 +7,6 @@
 
 }
 
-
-
-
 @font-face {
     font-family: 'mregular';
     src: url('mregular.woff2') format('woff2'),
@@ -18,6 +15,12 @@
     font-style: normal;
 
 }
+.footer {
+	width="80%";
+	border="0";
+	align="center";
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -61,8 +64,35 @@ h3 {
 	font-size:24px;
 }
 
+.button {
+	color: white;
+	background-color: #1F1F37;
+	padding: 10px 20px;
+	border: none;
+	text-align: center;
+	font-family: mbold, Arial, Helvetica, sans-serif;
+	}
+	
+.errorbtn {
+	color: white;
+	background-color: red;
+	padding: 10px 20px;
+	border: none;
+	text-align: center;
+	font-family: mbold, Arial, Helvetica, sans-serif;
+	}
+	
+	.agreebtn {
+	color: white;
+	background-color: green;
+	padding: 10px 20px;
+	border: none;
+	text-align: center;
+	font-family: mbold, Arial, Helvetica, sans-serif;
+	}
+
 a {
-	font-family: mregular, Arial, Helvetica, sans-serif;
+	font-family: mbold, Arial, Helvetica, sans-serif;
 	color: black;
 	text-decoration: none;
 }
@@ -81,4 +111,26 @@ b {
 }
 .price {
 	font-size: 24px;
+}
+
+.product {
+  width: 50%;
+  margin: auto;
+  border: 1px solid white;
+}
+
+csbutton {
+	text-color: white;
+}
+
+.descbox {
+width: 50%;	
+}
+.descboxleft {
+width: 50%;	
+text-align: left;
+}
+.descboxright {
+width: 50%;	
+text-align: right;
 }
